@@ -1,3 +1,62 @@
+/*@font-face {
+    font-family: 'open_sansregular';
+    src: url('fuentes/OpenSans-Regular-webfont.eot');
+    src: url('fuentes/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fuentes/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fuentes/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fuentes/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+@font-face {
+	font-family: 'Puls';
+	src:url('fuentes/Puls.eot?-z0qbg0');
+	src:url('fuentes/Puls.eot?#iefix-z0qbg0') format('embedded-opentype'),
+		url('fuentes/Puls.woff?-z0qbg0') format('woff'),
+		url('fuentes/Puls.ttf?-z0qbg0') format('truetype'),
+		url('fuentes/Puls.svg?-z0qbg0#Puls') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="puls-"], [class*=" puls-"] {
+	font-family: 'Puls';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.puls-lapiz:before {
+	content: "\e600";
+	margin-right: 0.6em;
+}
+.puls-estrella:before {
+	content: "\e601";
+	color: #FFBE2C;
+	margin-right: 0.3em;
+	position: relative;
+	top: 0.1em;
+}
+.puls-arriba:before {
+	content: "\e602";
+	color: #DD4F24;
+}
+.puls-abajo:before {
+	content: "\e603";
+	color: #DD4F24;
+}
+
+
+
 a {
 	color: #22BEC0;
 }
@@ -5,7 +64,7 @@ a {
 body
 {
 	background: #EEEEEE;
-	font-family: arial;
+	font-family: "Open Sans";
 	font-size: 16px;
 }
 
@@ -71,17 +130,29 @@ header #avatar img
 	width: 55px;
 }
 
-header  #logo img
+header #logo
 {
 	border-right: 1px solid white;
+	margin-right: 0.5em;
 	padding-right: 0.5em;
+}
+
+header  #logo img
+{
 	margin-right: 0.5em;
 	width: 55px;
+	-webkit-transition: 0.5s;
+}
+
+header  #logo img:hover
+{
+	-webkit-transform:rotate(360deg);
 }
 
 nav
 {
-	background: #80BCA3;
+	background: #0CBECE; /*#80BCA3*/
+	padding: 0 6em 0 0;
 	position: relative;
 }
 
@@ -104,6 +175,12 @@ nav ul li a
 	display: block;
 	padding: 0.5em;
 	text-decoration: none;
+	-webkit-transition: 0.3s;
+}
+
+nav ul li a:hover
+{
+	background: #343B54;
 }
 
 nav ul #publicar_nav
@@ -121,6 +198,24 @@ nav ul #publicar_nav a
 	font-style: italic;
 	padding: 0.6em 0.8em;
 	text-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+}
+
+nav ul #publicar_nav a:hover
+{
+	background: orange;
+	color: #344B54;
+}
+
+
+nav ul #publicar_nav a:hover:before
+{
+	color: #22BCE0;
+	font-size: 1.2em;
+}
+
+video
+{
+	display: none;
 }
 
 #contenido 
@@ -200,8 +295,40 @@ nav ul #publicar_nav a
 	top: 100%;
 }
 
+#contenido .item .votacion a
+{
+	text-decoration: none;
+}
+
 #contenido .item .votacion .comentarios_item,
 #contenido .item .votacion .guardar_item
 {
 	float: right;
+}
+
+@media screen and (min-width: 800px){
+
+	#contenido
+	{
+		overflow: hidden;
+	}
+
+	#contenido .item
+	{
+		float: left;
+		margin-right: 1%;
+		width: 49%;
+	}
+
+}
+
+@media screen and (min-width: 1000px){
+
+	video {
+		display: block;
+		float: right;
+		margin: 1em 0.5em 0 0.5em;
+		width: 20%
+	}
+
 }
