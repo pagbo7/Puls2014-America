@@ -332,3 +332,35 @@ video
 	}
 
 }
+
+/* Formularios */
+.formulario
+{
+	display: none;
+	padding: 1em;
+	text-align: right;
+}
+
+.formulario input
+{
+	border-radius: 5px;
+	padding: 0.2em 0.6em;
+}
+
+.formulario input[type="text"],
+.formulario input[type="url"]
+{
+	border: 1px solid #888;
+}
+
+.formulario input[type="submit"]
+{
+	background: #22BCE0;
+	border: #22BCE0;
+	border-radius: 5px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	color: white;
+	font-style: italic;
+	padding: 0.3em 0.8em;
+	text-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+}
